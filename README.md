@@ -125,7 +125,7 @@ Mango-Leaf-disease-Detector/
 3. Manage:
    - **Diseases**: Add/edit disease information with descriptions and treatments
    - **Predictions**: View and manage all prediction records
-
+#### Video link: [Demo](https://github.com/Shahriar-Hasan123/Mango-Leaf-disease-Detector/tree/main/Video)
 ## Model Details
 
 - **Model Type**: Convolutional Neural Network (CNN)
@@ -214,4 +214,3 @@ For questions or support, please contact the project maintainer.
 ---
 
 **Note**: This is a demonstration project. For production use, ensure proper security configurations, model validation, and user input sanitization.
-# Mango-Leaf-Disease-Detection
