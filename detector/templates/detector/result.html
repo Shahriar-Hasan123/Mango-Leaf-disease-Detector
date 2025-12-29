@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'detector/css/style.css' %}">
+    
+</head>
+<body class="result-page">
+<div class="container py-5">
+    <div class="card shadow-sm mx-auto" style="max-width: 900px;">
+        <div class="card-header text-center">
+            Prediction Result
+        </div>
+        <div class="card-body text-center">
+            <!-- Leaf Image -->
+            <img src="{{ image_url }}" class="img-fluid image-preview mb-4">
+
+            <!-- Prediction Details (moved directly after image) -->
+            <div class="mb-3 prediction-details">
+                <h5 class="section-title">Prediction</h5>
+                <p class="label mb-0"><strong>Disease Name:</strong> <span class="fw-semibold">{{ label }}</span></p>
+                <p class="mb-0"><span class="confidence-badge">{{ confidence }}%</span></p>
+            </div>
+
+            <!-- Disease Description -->
+            {% if disease %}
+            <h5 class="section-title">Description</h5>
+            <p>{{ disease.description }}</p>
+
+            <h5 class="section-title">Treatment</h5>
+            <p>{{ disease.treatment }}</p>
+            {% endif %}
+
+            <!-- Back Button -->
+            <a href="{% url 'upload' %}" class="btn btn-primary mt-4">Predict Another Image</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
